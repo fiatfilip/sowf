@@ -1,0 +1,219 @@
+/* You can add global styles to this file, and also import other style files */
+.card-base  .card-icon {
+        text-align: center;
+        position: relative;
+    }
+
+.imagecard { 
+    z-index: 2;
+    display: block;
+    positioN: relative;
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    border: 5px solid rgb(81, 210, 183);
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 0 auto;
+    color: white;
+}
+.card-data {
+    min-height: 250px ;
+    margin-top: -24px;
+    background: ghostwhite;
+    border: 1px solid #e0e0e0;
+    padding: 15px 0 10px 0;
+    box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    min-height: 215px;
+    }
+
+#widgetCardIcon {
+        background: white ;
+        font-size: 28px;
+        line-height: 78px;
+    }
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+    margin-top: -12px;
+    z-index: 3;
+    position:relative; 
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: rgb(81, 210, 183);
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+}
+
+/*Badges*/
+.badges{
+  font-size: 14px;
+  text-align: left;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.badges  .badges-split{
+  width: 20px;
+  float: left;
+  color: #fff;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+.badges  .badges-split.badges-gold{
+  background: #D4AF37;
+}
+
+.badges  .badges-split.badges-silver{
+  background: #c0c0c0;
+}
+
+.badges  .badges-split.badges-bronze{
+  background: #cd7f32;
+}
+
+
+
+.badges  .badges-text{
+  line-height: 22px;
+  font-size: 14px;
+  padding-top: 0px;
+  padding-left: 35px;
+  padding-right: 0px;
+  min-width:150px;
+}
+
+.badges  .badges-text label{
+    float:right;
+    margin-left: 20px;
+    cursor: pointer;
+    color:#d9534f;
+}
+
+.badges  .badges-text label:hover{
+    color:#ce3c39;
+}
+
+/*
+reputation labels
+*/
+.reputation {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 80px;
+  padding-top: 16px;
+  margin: 10px;
+  color: #444444;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;
+  box-shadow: 0 0 0 1px #F8F8F8 inset, 0 0 0 1px #CCCCCC;
+}
+.reputation .label {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+.btn-reputation-1 {
+  color: #ffffff;
+  background-color: #b6ed36;
+  border-color: #8fba2a;
+}
+.btn-reputation-2 {
+  color: #ffffff;
+  background-color: #37efda;
+  border-color: #2ab7a7;
+}
+.btn-reputation-3 {
+  color: #ffffff;
+  background-color: #efa537;
+  border-color: #ba7f28;
+}
+.btn-reputation-4 {
+  color: #ffffff;
+  background-color: #ea2eb4;
+  border-color: #ba2790;
+}
+.btn-reputation-5 {
+  color: #ffffff;
+  background-color: #a264e7;
+  border-color: #62309a;
+}
+
+/*ON/OFF switch*/
+ .onoffswitch1 {
+    position: relative; width: 220px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    margin: 0 auto;
+}
+
+.onoffswitch1-checkbox {
+   display: none;
+}
+
+.onoffswitch1-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 30px;
+}
+
+.onoffswitch1-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch1-inner:before, .onoffswitch1-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: 0px 15px 0px rgba(0,0,0,0.08) inset;
+}
+
+.onoffswitch1-inner:before {
+    content: "I'm in!";
+    padding-left: 10px;
+    background-color: #2FCCFF; color: #FFFFFF;
+    border-radius: 30px 0 0 30px;
+}
+
+.onoffswitch1-inner:after {
+    content: "Not interested";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+    border-radius: 0 30px 30px 0;
+}
+
+.onoffswitch1-switch {
+    display: block; width: 90px; margin: 0px;
+    background: #FFFFFF;
+    border: 2px solid #999999; border-radius: 30px;
+    position: absolute; top: 0; bottom: 0; right: 130px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
+    background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
+    background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%); 
+    background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 80%);
+    box-shadow: 0 1px 1px white inset;
+}
+
+.onoffswitch1-checkbox:checked + .onoffswitch1-label .onoffswitch1-inner {
+    margin-left: 0;
+}
+
+.onoffswitch1-checkbox:checked + .onoffswitch1-label .onoffswitch1-switch {
+    right: 0px; 
+}

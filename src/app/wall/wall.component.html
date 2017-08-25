@@ -1,0 +1,11 @@
+<div class="row">
+  <a href="" class="list-group-item clearfix" *ngFor="let standing of standings">
+    <span class="pull-left">
+      <img src="{{ standing.profile_image }}" class="img-responsive" style="max-height:50px; margin-right:20px;">
+    </span>
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{ standing.display_name }}({{ standing.reputation }})</h4>
+        <a href="{{ standing.link }}" class="list-group-item-text">{{ standing.link }}</a>
+    </div>
+  </a>
+</div>

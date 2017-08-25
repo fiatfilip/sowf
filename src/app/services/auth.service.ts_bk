@@ -1,0 +1,78 @@
+import { Injectable, OnInit } from '@angular/core';
+import { OAuthService } from 'angular2-oauth2/oauth-service';
+
+@Injectable()
+export class AuthService implements OnInit {
+
+  constructor(private oauthService: OAuthService) {
+    // Login-Url
+    this.oauthService.loginUrl = "https://stackexchange.com/oauth/dialog"; 
+
+    // URL of the SPA to redirect the user to after login
+    this.oauthService.redirectUri = window.location.origin + "/authentication/authenticate";
+
+    // The SPA's id. The SPA is registerd with this id at the auth-server
+    this.oauthService.clientId = "10455";
+
+    // set the scope for the permissions the client should request
+    // With an empty scope, authentication will only allow an application to identify a user via the /me method. In order to access other information, different scope values must be sent. Multiple values may be sent in scope by comma or space delimitting them.
+
+    //read_inbox - access a user's global inbox
+    //no_expiry - access_token's with this scope do not expire
+    //write_access - perform write operations as a user 2.1
+    //private_info - access full history of a user's private actions on the site 
+    this.oauthService.scope = "";
+
+    // set to true, to receive also an id_token via OpenId Connect (OIDC) in addition to the
+    // OAuth2-based access_token
+    this.oauthService.oidc = true;
+
+    // Use setStorage to use sessionStorage or another implementation of the TS-type Storage
+    // instead of localStorage
+    this.oauthService.setStorage(sessionStorage);
+
+    // The name of the auth-server that has to be mentioned within the token
+    this.oauthService.issuer = "https://stackexchange.com/oauth/dialog";
+
+    this.oauthService.tryLogin({});
+   }
+
+   ngOnInit() {
+    //this.oauthService.tryLogin({});
+    //this.login();
+  }
+
+  public login() {
+    console.log("login called");
+    this.oauthService.initImplicitFlow();
+    console.log(this.oauthService);
+  }
+
+  public authenticate() {
+    console.log("authenticate called");
+    window.location.href = "https://stackexchange.com/oauth/dialog?client_id=10455&redirect_uri=" + window.location.origin + "/authentication/authenticate";
+  }
+    
+  public logoff() {
+    console.log("logout called");
+    this.oauthService.logOut();
+    console.log("logout called");
+  }
+
+  isAuthenticated():boolean{
+    return this.oauthService.hasValidAccessToken() && this.oauthService.hasValidIdToken();
+  }
+
+  public getClaims(){
+    return this.oauthService.getIdentityClaims();
+  }
+
+      public getUserName() {
+        
+        var claims = this.oauthService.getIdentityClaims();
+        if (!claims) return null;
+
+        return claims.given_name;
+    }
+
+}

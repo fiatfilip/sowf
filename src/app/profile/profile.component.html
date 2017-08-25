@@ -1,0 +1,98 @@
+<!--<p>
+
+{{ reputation }} <br>
+{{ reputationChangeDay }} <br>
+{{ reputationChangeWeek }} <br>
+{{ reputationChangeMonth }} <br>
+{{ reputationChangeQuarter }} <br>
+{{ reputationChangeYear }} <br>
+
+</p>-->
+
+<div class="container card-base card-data">
+      <div class = "row">
+         <div class = "col-md-12">
+            <div class="card-icon">
+              <a href="{{ link }}">
+                <img id="widgetCardIcon" class="imagecard" src="{{ profileImage }}">
+              </a>
+               <div class="rank-label-container">
+                    <span class="label label-default rank-label">{{ reputation }}</span>
+                </div>
+               <div>
+                  <div>
+                      <h2 class="box-title" style="color: #bb7824;">{{ username }} </h2>
+                     <p class="card-block text-center">You can enroll here in the Haufe Lexware's employees ranking with your StackOverflow.com profile.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="space"></div>
+         </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-4">
+          <div class="onoffswitch1">
+            <input type="checkbox" name="onoffswitch1" class="onoffswitch1-checkbox" id="myonoffswitch1" [checked]="enrolled" (change)="onEnrollChange()">
+            <label class="onoffswitch1-label" for="myonoffswitch1">
+                <span class="onoffswitch1-inner"></span>
+                <span class="onoffswitch1-switch"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-1 col-md-offset-1">
+          <div class="reputation">
+              <span> Reputation gained today</span>
+              <span class="label btn-reputation-1">{{ reputationChangeDay }}</span>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="reputation">
+              <span> Reputation gained this week</span>
+              <span class="label btn-reputation-2">{{ reputationChangeWeek }}</span>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="reputation">
+              <span> Reputation gained this month</span>
+              <span class="label btn-reputation-3">{{ reputationChangeMonth }}</span>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="reputation">
+              <span> Reputation gained this quarter</span>
+              <span class="label btn-reputation-4">{{ reputationChangeQuarter }}</span>
+          </div>
+        </div>
+        <div class="col-md-1 col-md-offset-1">
+          <div class="reputation">
+              <span> Reputation gained this year</span>
+              <span class="label btn-reputation-5">{{ reputationChangeYear }}</span>
+          </div>
+        </div>                          
+      </div>
+
+
+
+
+
+
+      <div class="row badges">
+         <div class="col-md-2 col-md-offset-2">
+            <div class="badges-split badges-gold"><span class="count">{{ goldBadges }} </span></div>
+            <div class="badges-text">Gold badges </div>
+         </div>
+         <div class="col-md-2 col-md-offset-1">
+            <div class="badges-split badges-silver">{{ silverBadges }} </div>
+            <div class="badges-text">Silver badges </div>
+         </div>
+         <div class="col-md-2 col-md-offset-1">
+            <div class="badges-split badges-bronze">{{ bronzeBadges }} </div>
+            <div class="badges-text">Bronze badges </div>
+         </div>
+      </div>
+
+</div>
